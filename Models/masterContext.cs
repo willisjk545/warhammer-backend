@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using _40K.Models;
 
 namespace _40K.Models
 {
@@ -36,7 +37,18 @@ namespace _40K.Models
                 entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Name)
-                    .HasMaxLength(10)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Units>(entity =>
+            {
+                entity.ToTable("units");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.ArmyID).HasColumnName("ArmyID");
+
+                entity.Property(e => e.Name)
                     .IsUnicode(false);
             });
 
@@ -44,5 +56,7 @@ namespace _40K.Models
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public DbSet<_40K.Models.Units> Units { get; set; }
     }
 }

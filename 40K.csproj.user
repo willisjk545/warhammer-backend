@@ -11,5 +11,6 @@
     <WebStackScaffolding_DbContextTypeFullName>_40K.Models.masterContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_DbContextDialogWidth>600</WebStackScaffolding_DbContextDialogWidth>
+    <NameOfLastUsedPublishProfile>warhammerApp - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

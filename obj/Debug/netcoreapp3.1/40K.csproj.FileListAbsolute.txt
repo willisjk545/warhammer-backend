@@ -153,3 +153,5 @@ C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\
 C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.csproj.CoreCompileInputs.cache
 C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\warhammerApp - Web Deploy\profile.arm.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\web.config

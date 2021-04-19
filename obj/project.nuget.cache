@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z44ln53y9N3ZUUbtG8jZ5ZW6g0qJr9HQQADPika1cePDsRdHdQny95ui22tgzRvS22pH9yPnMDormn+rA35rHg==",
+  "dgSpecHash": "84Sk8ientUxU7wHVIWAWvlb2OjTESWWm4KPcRCnXojdMntVpo8QN8430pmS71JGWWFSTz1Deb+ndlKTOIvzzog==",
   "success": true,
   "projectFilePath": "C:\\Users\\Willi\\source\\repos\\40K\\40K.csproj",
   "expectedPackageFiles": [
@@ -175,12 +175,5 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Willi\\source\\repos\\40K\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

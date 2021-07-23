@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-04-20T12:58:54.792278Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-04-20T13:00:11.3112812Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Type": "subscription",
+      "Value": "b73535ad-72c6-4cf8-8631-ecb7baf14b9e"
+    },
+    "mssql1.resourceGroupName": {
+      "Type": "resourceGroup",
+      "Value": "Warhammer"
+    }
+  }
+}

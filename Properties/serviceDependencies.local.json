@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/warhammerdb/databases/warhammerdb",
+      "type": "mssql.azure",
+      "connectionId": "40KDatabase",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}

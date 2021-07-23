@@ -151,7 +151,17 @@ C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\
 C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.csproj.CoreCompileInputs.cache
-C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\warhammerApp - Web Deploy\profile.arm.json
 C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\web.config
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\local\mssql1.arm.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\amplify\#current-cloud-backend\amplify-meta.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\amplify\#current-cloud-backend\tags.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\amplify\backend\amplify-meta.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\amplify\backend\tags.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\amplify\cli.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Warhammer40KService - Web Deploy\profile.arm.json
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Willi\source\repos\40K\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -34,8 +34,7 @@ namespace _40K
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:4200")
-                                      .AllowAnyHeader();
+                                      builder.AllowAnyHeader();
                                       builder.AllowAnyOrigin();
                                       builder.AllowAnyMethod();
                                   });
@@ -44,6 +43,7 @@ namespace _40K
             var connection = Configuration.GetConnectionString("40KDatabase");
             services.AddDbContextPool<masterContext>(options => options.UseSqlServer(connection));
             services.AddControllers();
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,9 +58,14 @@ namespace _40K
 
             app.UseRouting();
 
-            app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(x => x
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
 
             app.UseAuthorization();
+
+            app.UseSwagger();
 
             app.UseEndpoints(endpoints =>
             {

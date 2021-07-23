@@ -1,7 +1,6 @@
 C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\appsettings.Development.json
 C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\appsettings.json
 C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\warhammerApp - Web Deploy\profile.arm.json
 C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\40K.exe
 C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\40K.deps.json
 C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\40K.runtimeconfig.json
@@ -154,3 +153,13 @@ C:\Users\Willi\source\repos\40K\obj\Release\netcoreapp3.1\staticwebassets\40K.St
 C:\Users\Willi\source\repos\40K\obj\Release\netcoreapp3.1\40K.dll
 C:\Users\Willi\source\repos\40K\obj\Release\netcoreapp3.1\40K.pdb
 C:\Users\Willi\source\repos\40K\obj\Release\netcoreapp3.1\40K.genruntimeconfig.cache
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\web.config
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Properties\serviceDependencies.local.json
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\local\mssql1.arm.json
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Willi\source\repos\40K\obj\Release\netcoreapp3.1\40K.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Willi\source\repos\40K\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\Warhammer40KService - Web Deploy\profile.arm.json

@@ -41,7 +41,7 @@ namespace _40K
             });
 
             var connection = Configuration.GetConnectionString("40KDatabase");
-            services.AddDbContextPool<masterContext>(options => options.UseSqlServer(connection));
+            services.AddDbContextPool<WarhammerContext>(options => options.UseSqlServer(connection));
             services.AddControllers();
             services.AddSwaggerGen();
         }

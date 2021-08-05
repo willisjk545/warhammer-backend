@@ -11,48 +11,48 @@ namespace _40K.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class FactionsController : ControllerBase
+    public class UsersController : ControllerBase
     {
         private readonly WarhammerContext _context;
 
-        public FactionsController(WarhammerContext context)
+        public UsersController(WarhammerContext context)
         {
             _context = context;
         }
 
-        // GET: api/Factions
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Factions>>> GetFactions()
+        public async Task<ActionResult<IEnumerable<User>>> GetUser()
         {
-            return await _context.Factions.ToListAsync();
+            return await _context.User.ToListAsync();
         }
 
-        // GET: api/Factions/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Factions>> GetFactions(int id)
+        public async Task<ActionResult<User>> GetUser(int id)
         {
-            var factions = await _context.Factions.FindAsync(id);
+            var user = await _context.User.FindAsync(id);
 
-            if (factions == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
-            return factions;
+            return user;
         }
 
-        // PUT: api/Factions/5
+        // PUT: api/Users/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutFactions(int id, Factions factions)
+        public async Task<IActionResult> PutUser(int id, User user)
         {
-            if (id != factions.Id)
+            if (id != user.UserId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(factions).State = EntityState.Modified;
+            _context.Entry(user).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace _40K.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!FactionsExists(id))
+                if (!UserExists(id))
                 {
                     return NotFound();
                 }
@@ -73,37 +73,37 @@ namespace _40K.Controllers
             return NoContent();
         }
 
-        // POST: api/Factions
+        // POST: api/Users
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Factions>> PostFactions(Factions factions)
+        public async Task<ActionResult<User>> PostUser(User user)
         {
-            _context.Factions.Add(factions);
+            _context.User.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetFactions", new { id = factions.Id }, factions);
+            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
-        // DELETE: api/Factions/5
+        // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Factions>> DeleteFactions(int id)
+        public async Task<ActionResult<User>> DeleteUser(int id)
         {
-            var factions = await _context.Factions.FindAsync(id);
-            if (factions == null)
+            var user = await _context.User.FindAsync(id);
+            if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Factions.Remove(factions);
+            _context.User.Remove(user);
             await _context.SaveChangesAsync();
 
-            return factions;
+            return user;
         }
 
-        private bool FactionsExists(int id)
+        private bool UserExists(int id)
         {
-            return _context.Factions.Any(e => e.Id == id);
+            return _context.User.Any(e => e.UserId == id);
         }
     }
 }

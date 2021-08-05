@@ -13,9 +13,9 @@ namespace _40K.Controllers
     [ApiController]
     public class UnitsController : ControllerBase
     {
-        private readonly masterContext _context;
+        private readonly WarhammerContext _context;
 
-        public UnitsController(masterContext context)
+        public UnitsController(WarhammerContext context)
         {
             _context = context;
         }

@@ -173,3 +173,4 @@ C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\staticwebassets\40K.Stat
 C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.dll
 C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.pdb
 C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.genruntimeconfig.cache
+C:\Users\Willi\source\repos\40K\obj\Debug\netcoreapp3.1\40K.csprojAssemblyReference.cache

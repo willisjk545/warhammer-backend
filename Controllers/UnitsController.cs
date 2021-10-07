@@ -42,12 +42,12 @@ namespace _40K.Controllers
         }
 
         // GET: api/Armies/byArmyID/1
-        [HttpGet("byArmyID/{armyid}")]
-        public async Task<ActionResult<IEnumerable<Units>>> GetUnitsByArmyID(int armyid)
+        [HttpGet("byArmyID/{armyID}/{userID}")]
+        public async Task<ActionResult<IEnumerable<Units>>> GetUnitsByArmyID(int armyID, int userID)
         {
             var units = _context.Units.AsQueryable();
 
-            units = _context.Units.Where(i => i.ArmyID == armyid);
+            units = _context.Units.Where(i => i.ArmyID == armyID && i.UserID == userID);
 
             return Ok(await units.ToListAsync());
         }

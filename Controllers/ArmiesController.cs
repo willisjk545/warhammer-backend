@@ -42,12 +42,12 @@ namespace _40K.Controllers
         }
 
         // GET: api/Armies/byFactionID/1
-        [HttpGet("byFactionID/{factionId}")]
-        public async Task<ActionResult<IEnumerable<Armies>>> GetArmiesByFactionID(int factionId)
+        [HttpGet("getArmiesByFactionID/{factionID}/{userID}")]
+        public async Task<ActionResult<IEnumerable<Armies>>> GetArmiesByFactionID(int factionID, int userID)
         {
             var armies = _context.Armies.AsQueryable();
 
-                armies = _context.Armies.Where(i => i.FactionID == factionId);
+                armies = _context.Armies.Where(i => i.FactionID == factionID && i.UserID == userID);
 
             return Ok(await armies.ToListAsync());
         }
@@ -88,8 +88,9 @@ namespace _40K.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Armies>> PostArmies(Armies armies)
+        public async Task<ActionResult<Armies>> SaveNewArmy(Armies armies)
         {
+
             _context.Armies.Add(armies);
             await _context.SaveChangesAsync();
 
@@ -97,19 +98,20 @@ namespace _40K.Controllers
         }
 
         // DELETE: api/Armies/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Armies>> DeleteArmies(int id)
+        [HttpDelete("{armyID}/{userID}")]
+        public async Task<ActionResult<Armies>> DeleteArmy(int armyID, int userID)
         {
-            var armies = await _context.Armies.FindAsync(id);
-            if (armies == null)
+            //var army = await _context.Armies.FindAsync(armyID);
+            var army = _context.Armies.Where(i => i.UserID == userID && i.Id == armyID).FirstOrDefault();
+            if (army == null)
             {
                 return NotFound();
             }
 
-            _context.Armies.Remove(armies);
+            _context.Armies.Remove(army);
             await _context.SaveChangesAsync();
 
-            return armies;
+            return army;
         }
 
         private bool ArmiesExists(int id)

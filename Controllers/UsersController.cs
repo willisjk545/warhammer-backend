@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _40K.Models;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace _40K.Controllers
 {
@@ -27,18 +29,40 @@ namespace _40K.Controllers
             return await _context.User.ToListAsync();
         }
 
-        // GET: api/Users/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        // GET: api/Users/5/password
+        [HttpGet("checkPassword/{Username}/{Password}")]
+        public async Task<ActionResult<User>> GetUser(string Username, string Password)
         {
-            var user = await _context.User.FindAsync(id);
+            var hashedString =  GetHashString(Password);
+            var dbUser = _context.User.Where(x => x.Password == hashedString && x.Username == Username).FirstOrDefault();
 
-            if (user == null)
+            if (dbUser != null)
             {
-                return NotFound();
+                return Ok(dbUser.UserId);
+            }
+            else
+            {
+                return Content("false");
             }
 
-            return user;
+            //second api call for datetime
+
+        }
+
+        public static byte[] GetHash(string password)
+        {
+            HashAlgorithm sha = SHA256.Create();
+            return sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+        }
+
+        public static string GetHashString(string inputString)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (byte b in GetHash(inputString))
+                sb.Append(b.ToString("X2"));
+
+            return sb.ToString();
         }
 
         // PUT: api/Users/5
@@ -47,6 +71,7 @@ namespace _40K.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
+            //check for existing username
             if (id != user.UserId)
             {
                 return BadRequest();
@@ -79,6 +104,8 @@ namespace _40K.Controllers
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
+            user.Password =  GetHashString(user.Password); 
+            
             _context.User.Add(user);
             await _context.SaveChangesAsync();
 

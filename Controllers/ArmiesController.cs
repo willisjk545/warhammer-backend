@@ -98,11 +98,11 @@ namespace _40K.Controllers
         }
 
         // DELETE: api/Armies/5
-        [HttpDelete("{armyID}/{userID}")]
-        public async Task<ActionResult<Armies>> DeleteArmy(int armyID, int userID)
+        [HttpDelete("{id}/{userID}")]
+        public async Task<ActionResult<Armies>> DeleteArmy(int id, int userID)
         {
             //var army = await _context.Armies.FindAsync(armyID);
-            var army = _context.Armies.Where(i => i.UserID == userID && i.Id == armyID).FirstOrDefault();
+            var army = _context.Armies.Where(i => i.UserID == userID && i.Id == id).FirstOrDefault();
             if (army == null)
             {
                 return NotFound();

@@ -28,10 +28,10 @@ namespace _40K.Controllers
         }
 
         // GET: api/Units/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Units>> GetUnits(int id)
+        [HttpGet("{id}/{userID}")]
+        public async Task<ActionResult<Units>> GetUnits(int id, int userID)
         {
-            var units = await _context.Units.FindAsync(id);
+            var units = _context.Units.Where(i => i.Id == id && i.UserID == userID).FirstOrDefault();
 
             if (units == null)
             {
@@ -92,10 +92,10 @@ namespace _40K.Controllers
         }
 
         // DELETE: api/Units/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Units>> DeleteUnits(int id)
+        [HttpDelete("{unitID}/{userID}")]
+        public async Task<ActionResult<Units>> DeleteUnits(int unitID, int userID)
         {
-            var units = await _context.Units.FindAsync(id);
+            var units = _context.Units.Where(i => i.UserID == userID && i.Id == unitID).FirstOrDefault();
             if (units == null)
             {
                 return NotFound();

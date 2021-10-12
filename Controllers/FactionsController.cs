@@ -13,9 +13,9 @@ namespace _40K.Controllers
     [ApiController]
     public class FactionsController : ControllerBase
     {
-        private readonly masterContext _context;
+        private readonly WarhammerContext _context;
 
-        public FactionsController(masterContext context)
+        public FactionsController(WarhammerContext context)
         {
             _context = context;
         }

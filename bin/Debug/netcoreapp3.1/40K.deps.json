@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "40K/1.0.0": {
         "dependencies": {
-          "Amazon.Lambda.AspNetCoreServer": "6.0.1",
+          "Amazon.Lambda.AspNetCoreServer": "6.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.15",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.1.15",
@@ -329,7 +329,7 @@
           "lib/netcoreapp3.1/Amazon.Lambda.ApplicationLoadBalancerEvents.dll": {}
         }
       },
-      "Amazon.Lambda.AspNetCoreServer/6.0.1": {
+      "Amazon.Lambda.AspNetCoreServer/6.0.3": {
         "dependencies": {
           "Amazon.Lambda.APIGatewayEvents": "2.4.0",
           "Amazon.Lambda.ApplicationLoadBalancerEvents": "2.1.0",
@@ -4172,12 +4172,12 @@
       "path": "amazon.lambda.applicationloadbalancerevents/2.1.0",
       "hashPath": "amazon.lambda.applicationloadbalancerevents.2.1.0.nupkg.sha512"
     },
-    "Amazon.Lambda.AspNetCoreServer/6.0.1": {
+    "Amazon.Lambda.AspNetCoreServer/6.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3qlMZvytQVOG2dr/eKMXTr3z6TOkgf6lyi/sgACP6NsEbB/qbBIdsk/57AoBA+xjGm692/5cLSafgfAt6FFSVQ==",
-      "path": "amazon.lambda.aspnetcoreserver/6.0.1",
-      "hashPath": "amazon.lambda.aspnetcoreserver.6.0.1.nupkg.sha512"
+      "sha512": "sha512-ABvQJt9wg/kwYILEhHJno1bqx3DjFuTYNdFh2Bb8w35Gl6/1oTgSDTn3geJHWYsJ0yVqJgM6/YIs/R7ZSSf1nA==",
+      "path": "amazon.lambda.aspnetcoreserver/6.0.3",
+      "hashPath": "amazon.lambda.aspnetcoreserver.6.0.3.nupkg.sha512"
     },
     "Amazon.Lambda.Core/2.0.0": {
       "type": "package",

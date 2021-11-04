@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Amazon.Lambda.APIGatewayEvents/2.4.0": {
+      "Amazon.Lambda.APIGatewayEvents/2.3.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Amazon.Lambda.APIGatewayEvents.dll": {}
@@ -20,15 +20,14 @@
           "lib/netcoreapp3.1/Amazon.Lambda.ApplicationLoadBalancerEvents.dll": {}
         }
       },
-      "Amazon.Lambda.AspNetCoreServer/6.0.1": {
+      "Amazon.Lambda.AspNetCoreServer/5.2.0": {
         "type": "package",
         "dependencies": {
-          "Amazon.Lambda.APIGatewayEvents": "2.4.0",
+          "Amazon.Lambda.APIGatewayEvents": "2.3.0",
           "Amazon.Lambda.ApplicationLoadBalancerEvents": "2.1.0",
-          "Amazon.Lambda.Core": "2.0.0",
+          "Amazon.Lambda.Core": "1.2.0",
           "Amazon.Lambda.Logging.AspNetCore": "3.1.0",
-          "Amazon.Lambda.Serialization.SystemTextJson": "2.1.0",
-          "System.IO.Pipelines": "4.7.2"
+          "Amazon.Lambda.Serialization.SystemTextJson": "2.1.0"
         },
         "compile": {
           "lib/netcoreapp3.1/Amazon.Lambda.AspNetCoreServer.dll": {}
@@ -40,7 +39,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Amazon.Lambda.Core/2.0.0": {
+      "Amazon.Lambda.Core/1.2.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Amazon.Lambda.Core.dll": {}
@@ -74,6 +73,30 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.100": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.Extensions.NETCore.Setup/3.3.101": {
+        "type": "package",
+        "dependencies": {
+          "AWSSDK.Core": "[3.3.100, 3.6.0)",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.8": {
@@ -1906,15 +1929,6 @@
           "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         }
       },
-      "System.IO.Pipelines/4.7.2": {
-        "type": "package",
-        "compile": {
-          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.0/_._": {}
-        }
-      },
       "System.Linq/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2916,14 +2930,14 @@
     }
   },
   "libraries": {
-    "Amazon.Lambda.APIGatewayEvents/2.4.0": {
-      "sha512": "QDDGZq2RwY4BBn2ai/dLLCdeHZBp1cSwqrjAe/m371z6Sv6pza8ZsVnZYxE+Dqmhh4UF0uZ6t520tVqOYcEzzQ==",
+    "Amazon.Lambda.APIGatewayEvents/2.3.0": {
+      "sha512": "6tlHmsY3lqk9k4v0ndMEYwdIFrbTOdle/0gyPL7U/zUC3/ApFKAMa2dURwV0H2XQkqzk9W6D6emq0J9jgxJPfw==",
       "type": "package",
-      "path": "amazon.lambda.apigatewayevents/2.4.0",
+      "path": "amazon.lambda.apigatewayevents/2.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "amazon.lambda.apigatewayevents.2.4.0.nupkg.sha512",
+        "amazon.lambda.apigatewayevents.2.3.0.nupkg.sha512",
         "amazon.lambda.apigatewayevents.nuspec",
         "lib/netcoreapp3.1/Amazon.Lambda.APIGatewayEvents.dll",
         "lib/netcoreapp3.1/Amazon.Lambda.APIGatewayEvents.xml",
@@ -2946,14 +2960,14 @@
         "lib/netstandard2.0/Amazon.Lambda.ApplicationLoadBalancerEvents.xml"
       ]
     },
-    "Amazon.Lambda.AspNetCoreServer/6.0.1": {
-      "sha512": "3qlMZvytQVOG2dr/eKMXTr3z6TOkgf6lyi/sgACP6NsEbB/qbBIdsk/57AoBA+xjGm692/5cLSafgfAt6FFSVQ==",
+    "Amazon.Lambda.AspNetCoreServer/5.2.0": {
+      "sha512": "pjpijX2ivNHNi2nUnJy6aVkeA6DVucpNugJECPI60hHVhVJbWteONfDLdvFm3EeKRdZVNlBV83yeFZ64B81raw==",
       "type": "package",
-      "path": "amazon.lambda.aspnetcoreserver/6.0.1",
+      "path": "amazon.lambda.aspnetcoreserver/5.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "amazon.lambda.aspnetcoreserver.6.0.1.nupkg.sha512",
+        "amazon.lambda.aspnetcoreserver.5.2.0.nupkg.sha512",
         "amazon.lambda.aspnetcoreserver.nuspec",
         "lib/netcoreapp3.1/Amazon.Lambda.AspNetCoreServer.dll",
         "lib/netcoreapp3.1/Amazon.Lambda.AspNetCoreServer.xml",
@@ -2961,15 +2975,17 @@
         "lib/netstandard2.0/Amazon.Lambda.AspNetCoreServer.xml"
       ]
     },
-    "Amazon.Lambda.Core/2.0.0": {
-      "sha512": "V4fw3pYuP1LyUJThpbrbLwy2b4TH3CPYh5oId/CgJvGkX7lSAVyOEmkdGvDhpjegxnS4rgw6tP7faftVBO9jwQ==",
+    "Amazon.Lambda.Core/1.2.0": {
+      "sha512": "goaq1LaH1UJB18BNG/Apxmn0P7dAlLWFbxU2nKxK+M4lH2KJaZDbtlP2gFEAJ+aENOMBHthaLPEtk3944J2OOg==",
       "type": "package",
-      "path": "amazon.lambda.core/2.0.0",
+      "path": "amazon.lambda.core/1.2.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "amazon.lambda.core.2.0.0.nupkg.sha512",
+        "amazon.lambda.core.1.2.0.nupkg.sha512",
         "amazon.lambda.core.nuspec",
+        "lib/netstandard1.3/Amazon.Lambda.Core.dll",
+        "lib/netstandard1.3/Amazon.Lambda.Core.xml",
         "lib/netstandard2.0/Amazon.Lambda.Core.dll",
         "lib/netstandard2.0/Amazon.Lambda.Core.xml"
       ]
@@ -2998,6 +3014,70 @@
         "amazon.lambda.serialization.systemtextjson.nuspec",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.dll",
         "lib/netcoreapp3.1/Amazon.Lambda.Serialization.SystemTextJson.xml"
+      ]
+    },
+    "AWSSDK.Core/3.3.100": {
+      "sha512": "1zJggHEvcrqLRrICUJFsmmqxlnbQimUihhTsSWSlErqEi2keTROPrShmnAzz5aMU0dGuMFI8jWbAL1On2QXpKg==",
+      "type": "package",
+      "path": "awssdk.core/3.3.100",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.core.3.3.100.nupkg.sha512",
+        "awssdk.core.nuspec",
+        "lib/MonoAndroid10/AWSSDK.Core.XML",
+        "lib/MonoAndroid10/AWSSDK.Core.dll",
+        "lib/MonoAndroid10/AWSSDK.Core.pdb",
+        "lib/MonoTouch10/AWSSDK.Core.XML",
+        "lib/MonoTouch10/AWSSDK.Core.dll",
+        "lib/Xamarin.Mac20/AWSSDK.Core.XML",
+        "lib/Xamarin.Mac20/AWSSDK.Core.dll",
+        "lib/Xamarin.iOS10/AWSSDK.Core.XML",
+        "lib/Xamarin.iOS10/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.dll",
+        "lib/net35/AWSSDK.Core.pdb",
+        "lib/net35/AWSSDK.Core.xml",
+        "lib/net45/AWSSDK.Core.dll",
+        "lib/net45/AWSSDK.Core.pdb",
+        "lib/net45/AWSSDK.Core.xml",
+        "lib/netstandard1.3/AWSSDK.Core.dll",
+        "lib/netstandard1.3/AWSSDK.Core.pdb",
+        "lib/netstandard1.3/AWSSDK.Core.xml",
+        "lib/netstandard2.0/AWSSDK.Core.dll",
+        "lib/netstandard2.0/AWSSDK.Core.pdb",
+        "lib/netstandard2.0/AWSSDK.Core.xml",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.XML",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.dll",
+        "lib/portable-net45+win8+wpa81+wp8/AWSSDK.Core.pdb",
+        "lib/uap/AWSSDK.Core.XML",
+        "lib/uap/AWSSDK.Core.dll",
+        "lib/uap/AWSSDK.Core.pdb",
+        "lib/win8/AWSSDK.Core.XML",
+        "lib/win8/AWSSDK.Core.dll",
+        "lib/win8/AWSSDK.Core.pdb",
+        "lib/wp8/AWSSDK.Core.XML",
+        "lib/wp8/AWSSDK.Core.dll",
+        "lib/wp8/AWSSDK.Core.pdb",
+        "lib/wpa81/AWSSDK.Core.XML",
+        "lib/wpa81/AWSSDK.Core.dll",
+        "lib/wpa81/AWSSDK.Core.pdb",
+        "tools/account-management.ps1"
+      ]
+    },
+    "AWSSDK.Extensions.NETCore.Setup/3.3.101": {
+      "sha512": "mbFGOX62zG4A/0bIhKy+I3NmNBAwSCKClFl+Y6RzuRj+0cQDBbmH33JMe8x3SWizhoyl+ATm2ldOR1phIFTGvA==",
+      "type": "package",
+      "path": "awssdk.extensions.netcore.setup/3.3.101",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "awssdk.extensions.netcore.setup.3.3.101.nupkg.sha512",
+        "awssdk.extensions.netcore.setup.nuspec",
+        "lib/netstandard1.3/AWSSDK.Extensions.NETCore.Setup.dll",
+        "lib/netstandard1.3/AWSSDK.Extensions.NETCore.Setup.pdb",
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.dll",
+        "lib/netstandard2.0/AWSSDK.Extensions.NETCore.Setup.pdb"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.8": {
@@ -6330,34 +6410,6 @@
         "system.io.filesystem.primitives.nuspec"
       ]
     },
-    "System.IO.Pipelines/4.7.2": {
-      "sha512": "rGIIhoY3lUdn9rWeuGdgeZZ0P+SpJ1wZI5g8TnXqgvuhFgUP7iP9Nt5FZebYInQZQxqnwjPxdYYBE5l/8PJmqQ==",
-      "type": "package",
-      "path": "system.io.pipelines/4.7.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.IO.Pipelines.dll",
-        "lib/net461/System.IO.Pipelines.xml",
-        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
-        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
-        "lib/netstandard1.3/System.IO.Pipelines.dll",
-        "lib/netstandard1.3/System.IO.Pipelines.xml",
-        "lib/netstandard2.0/System.IO.Pipelines.dll",
-        "lib/netstandard2.0/System.IO.Pipelines.xml",
-        "ref/net461/System.IO.Pipelines.dll",
-        "ref/net461/System.IO.Pipelines.xml",
-        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
-        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.4.7.2.nupkg.sha512",
-        "system.io.pipelines.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
     "System.Linq/4.3.0": {
       "sha512": "5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "type": "package",
@@ -9137,7 +9189,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Amazon.Lambda.AspNetCoreServer >= 6.0.1",
+      "AWSSDK.Extensions.NETCore.Setup >= 3.3.101",
+      "Amazon.Lambda.AspNetCoreServer >= 5.2.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.15",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.15",
@@ -9188,9 +9241,13 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "AWSSDK.Extensions.NETCore.Setup": {
+            "target": "Package",
+            "version": "[3.3.101, )"
+          },
           "Amazon.Lambda.AspNetCoreServer": {
             "target": "Package",
-            "version": "[6.0.1, )"
+            "version": "[5.2.0, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -9241,16 +9298,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.413\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.414\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Willi\\source\\repos\\40K\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
